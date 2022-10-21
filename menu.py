@@ -21,6 +21,7 @@ while user_menu_choice != 'quit':
     print("\t\t-----------------------------")
 
     user_menu_choice = input("Chose from the menu above: ")
+    print("=>")
 
     if user_menu_choice == 'add':
         print("Demo add")
