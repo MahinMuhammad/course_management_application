@@ -20,6 +20,7 @@ while user_menu_choice != 'quit':
     print("\t\t|Show All Courses   : courses|")
     print("\t\t|Show One Course    : course |")
     print("\t\t|Search Course      : search |")
+    print("\t\t|Save Session       : save   |")
     print("\t\t|Quit               : quit   |")
     print("\t\t ----------------------------")
 
@@ -59,6 +60,10 @@ while user_menu_choice != 'quit':
             adding_choice = input("Course does not exist. Do you want to add as new course?('y' to add): ")
             if adding_choice == 'y':
                 course_log_reference.add_course(course_code)
+        print("")
+
+    elif user_menu_choice == 'save':
+        print("Demo save")
         print("")
 
     elif user_menu_choice == 'quit':
