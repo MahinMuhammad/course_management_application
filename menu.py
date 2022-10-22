@@ -28,11 +28,12 @@ while user_menu_choice != 'quit':
 
     if user_menu_choice == 'add':
         course_code = input("Input Course code: ")
-        course_log_reference.add_course( course_code)
+        course_log_reference.add_course(course_code)
         print("")
 
     elif user_menu_choice == 'update':
-        print("Demo update")
+        course_code = input("Input Course code: ")
+        course_log_reference.update_course(course_code)
         print("")
 
     elif user_menu_choice == 'delete':
