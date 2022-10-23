@@ -1,10 +1,14 @@
 import course as course_module
+import course_file
 
 class CourseLog():
 
     courses = []
     def __init__(self):
-        pass
+        courses_dictionary = course_file.retrive_from_file()
+        for course_dictionary in courses_dictionary:
+            course = course_module.Course(course_dictionary["course_code"], course_dictionary["course_title"], course_dictionary["course_credit"], course_dictionary["prerequisites"][:])
+            self.courses.append(course)
     
     def search_course(self, course_code):
         for course in self.courses:

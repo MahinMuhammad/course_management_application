@@ -1,4 +1,5 @@
 import course_log
+import course_file
 
 print("")
 
@@ -63,10 +64,13 @@ while user_menu_choice != 'quit':
         print("")
 
     elif user_menu_choice == 'save':
-        print("Demo save")
+        courses = getattr(course_log_reference,'courses')
+        course_file.store_on_file(courses)
         print("")
 
     elif user_menu_choice == 'quit':
+        courses = getattr(course_log_reference,'courses')
+        course_file.store_on_file(courses)
         print("Bye..")
         print("")
 
